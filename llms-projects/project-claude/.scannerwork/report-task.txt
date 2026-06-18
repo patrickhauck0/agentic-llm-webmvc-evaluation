@@ -1,0 +1,6 @@
+projectKey=SGT-Claude-Opus
+serverUrl=http://localhost:9000
+serverVersion=26.6.0.123539
+dashboardUrl=http://localhost:9000/dashboard?id=SGT-Claude-Opus
+ceTaskId=ace5b668-8d02-4869-b1d9-e99473370b8a
+ceTaskUrl=http://localhost:9000/api/ce/task?id=ace5b668-8d02-4869-b1d9-e99473370b8a

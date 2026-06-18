@@ -1,0 +1,40 @@
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.task-list-header {
+  margin-bottom: 1.5rem;
+}
+
+.task-list-header h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  align-items: start;
+}
+
+.empty-state-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.empty-state-container.full-width {
+  grid-column: 1 / -1;
+}
+
+.empty-state-text {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+  max-width: 400px;
+}

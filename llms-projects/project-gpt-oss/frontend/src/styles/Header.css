@@ -1,0 +1,24 @@
+/* Header.css */
+@import '../styles/designTokens.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.header__user {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+}

@@ -1,0 +1,184 @@
+/* ============================================================
+   TagModal — Estilos do modal de gerenciamento de tags (RF12)
+   ============================================================ */
+
+/* ---- Seção de criação (input + botão) ---- */
+.tag-modal__add-row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.tag-modal__add-row .form-input {
+  flex: 1;
+  height: 40px;
+}
+
+.tag-modal__add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  height: 40px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tag-modal__add-btn:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.tag-modal__add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- Lista de tags ---- */
+.tag-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+/* ---- Item da tag ---- */
+.tag-modal__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.tag-modal__item:hover {
+  background: var(--color-bg-surface-hover);
+}
+
+.tag-modal__item-name {
+  flex: 1;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag-modal__item-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* ---- Botões de ação do item ---- */
+.tag-modal__action-btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.tag-modal__action-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+}
+
+.tag-modal__action-btn--danger:hover {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+}
+
+.tag-modal__action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Edição inline ---- */
+.tag-modal__edit-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.tag-modal__edit-input {
+  flex: 1;
+  height: 32px;
+  padding: 0 10px;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border-focus);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-accent-light);
+}
+
+.tag-modal__edit-save,
+.tag-modal__edit-cancel {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.tag-modal__edit-save {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.tag-modal__edit-save:hover {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.tag-modal__edit-cancel {
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+.tag-modal__edit-cancel:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+}
+
+.tag-modal__edit-save svg,
+.tag-modal__edit-cancel svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---- Estado vazio ---- */
+.tag-modal__empty {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+/* ---- Carregando ---- */
+.tag-modal__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+}

@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "figma": {
+      "disabled": false,
+      "serverUrl": "http://127.0.0.1:3845/mcp"
+    },
+    "supabase-claude": {
+      "disabled": false,
+      "headers": {
+        "Authorization": "Bearer [your_token]"
+      },
+      "serverUrl": "https://mcp.supabase.com/mcp?project_ref=pzkybvffotwzfxlljzmq"
+    },
+    "supabase-gemini": {
+      "disabled": false,
+      "headers": {
+        "Authorization": "Bearer [your_token]"
+      },
+      "serverUrl": "https://mcp.supabase.com/mcp?project_ref=vlgbwrxmrospjgoxqqch"
+    },
+    "supabase-gpt": {
+      "disabled": false,
+      "headers": {
+        "Authorization": "Bearer [your_token]"
+      },
+      "serverUrl": "https://mcp.supabase.com/mcp?project_ref=uvatqooyrynjloojptzw"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+projectKey=SGT-GPT-OSS
+serverUrl=http://localhost:9000
+serverVersion=26.6.0.123539
+dashboardUrl=http://localhost:9000/dashboard?id=SGT-GPT-OSS
+ceTaskId=88d22a5f-fb48-4b31-9396-4efd9e82273a
+ceTaskUrl=http://localhost:9000/api/ce/task?id=88d22a5f-fb48-4b31-9396-4efd9e82273a

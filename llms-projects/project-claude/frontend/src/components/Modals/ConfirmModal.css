@@ -1,0 +1,79 @@
+/* ============================================================
+   ConfirmModal — Modal de confirmação de ação destrutiva
+   ============================================================ */
+
+/* ---- Overlay ---- */
+.confirm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  animation: fadeIn var(--transition-fast) ease;
+  padding: var(--space-md);
+}
+
+/* ---- Card ---- */
+.confirm-modal {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn var(--transition-normal) ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+}
+
+/* ---- Ícone de aviso ---- */
+.confirm-modal__icone {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-circle);
+  background: var(--color-error-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+}
+
+.confirm-modal__icone svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-error);
+}
+
+/* ---- Título ---- */
+.confirm-modal__titulo {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- Mensagem ---- */
+.confirm-modal__mensagem {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  max-width: 340px;
+}
+
+/* ---- Ações ---- */
+.confirm-modal__acoes {
+  display: flex;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.confirm-modal__acoes .btn {
+  flex: 1;
+}

@@ -1,0 +1,87 @@
+/* ============================================================
+   Dashboard — Layout principal
+   ============================================================ */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  background-color: var(--color-bg-page);
+}
+
+/* ---- Área principal (à direita da sidebar) ---- */
+.dashboard__main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 28px 32px;
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* ---- Cabeçalho do projeto selecionado ---- */
+.dashboard__project-header {
+  margin-bottom: 20px;
+}
+
+.dashboard__project-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 4px;
+}
+
+.dashboard__project-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---- Empty State ---- */
+.dashboard__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-height) - 120px);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.dashboard__empty-icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+  opacity: 0.45;
+  filter: grayscale(30%);
+}
+
+.dashboard__empty-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 8px;
+}
+
+.dashboard__empty-text {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  max-width: 420px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---- Responsivo ---- */
+@media (max-width: 768px) {
+  .dashboard__main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .dashboard__empty {
+    height: calc(100vh - var(--header-height) - 60px);
+    padding: 0 16px;
+  }
+
+  .dashboard__project-title {
+    font-size: var(--font-size-lg);
+  }
+}

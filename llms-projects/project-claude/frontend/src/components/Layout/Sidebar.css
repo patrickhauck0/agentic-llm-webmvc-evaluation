@@ -1,0 +1,227 @@
+/* ============================================================
+   Sidebar — Estilos do menu lateral de projetos
+   ============================================================ */
+
+/* ---- Backdrop (mobile overlay) ---- */
+.sidebar__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.sidebar__backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Sidebar container ---- */
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  background: var(--color-bg-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 95;
+  transition: transform 0.3s ease;
+}
+
+/* ---- Título da seção ---- */
+.sidebar__title {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: 20px 16px 12px;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+/* ---- Lista de projetos ---- */
+.sidebar__list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ---- Item de projeto ---- */
+.sidebar__item {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border-left: 3px solid transparent;
+  user-select: none;
+}
+
+.sidebar__item:hover {
+  background: var(--color-bg-surface-hover);
+}
+
+.sidebar__item--selected {
+  background: var(--color-bg-surface-hover);
+  border-left-color: var(--color-accent);
+}
+
+/* ---- Dot indicador ---- */
+.sidebar__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.sidebar__dot--selected {
+  background: var(--color-accent);
+}
+
+/* ---- Nome do projeto ---- */
+.sidebar__item-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+/* ---- Ações hover (editar / excluir) ---- */
+.sidebar__item-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.sidebar__item:hover .sidebar__item-actions {
+  opacity: 1;
+}
+
+.sidebar__action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.sidebar__action-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+}
+
+.sidebar__action-btn--danger:hover {
+  color: var(--color-error);
+}
+
+/* ---- Rodapé (Novo Projeto) ---- */
+.sidebar__footer {
+  padding: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.sidebar__new-btn {
+  width: 100%;
+  height: 40px;
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.sidebar__new-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ---- Botão fechar (mobile only) ---- */
+.sidebar__close-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.sidebar__close-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-surface-hover);
+}
+
+/* ---- Estados: Loading e Empty ---- */
+.sidebar__loading {
+  padding: 20px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar__empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Responsivo — Mobile (≤768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar--aberta {
+    transform: translateX(0);
+  }
+
+  .sidebar__close-btn {
+    display: flex;
+  }
+}

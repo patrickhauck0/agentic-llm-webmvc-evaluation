@@ -1,0 +1,94 @@
+/* Cadastro.css */
+@import '../styles/designTokens.css';
+
+.cadastro-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-surface);
+}
+
+.cadastro-form {
+  background: var(--color-background);
+  padding: var(--spacing-xxl);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cadastro-title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.cadastro-label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+}
+
+.cadastro-input {
+  padding: var(--spacing-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+}
+
+.cadastro-button {
+  background: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cadastro-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cadastro-button:hover:not(:disabled) {
+  background: var(--color-accent);
+}
+
+.cadastro-switch {
+  font-size: var(--font-size-xs);
+  text-align: center;
+  margin-top: var(--spacing-xs);
+}
+
+.cadastro-switch a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.required {
+  color: var(--color-error);
+}
+
+.spinner {
+  border: 2px solid var(--color-background);
+  border-top: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

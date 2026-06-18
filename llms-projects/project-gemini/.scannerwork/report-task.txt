@@ -1,0 +1,6 @@
+projectKey=SGT-Gemini-Pro
+serverUrl=http://localhost:9000
+serverVersion=26.6.0.123539
+dashboardUrl=http://localhost:9000/dashboard?id=SGT-Gemini-Pro
+ceTaskId=3d220ff8-4c9d-4b55-bf56-648c1fe0b538
+ceTaskUrl=http://localhost:9000/api/ce/task?id=3d220ff8-4c9d-4b55-bf56-648c1fe0b538

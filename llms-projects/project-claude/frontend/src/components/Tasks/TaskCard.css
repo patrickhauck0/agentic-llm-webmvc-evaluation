@@ -1,0 +1,132 @@
+/* ============================================================
+   TaskCard — Card individual de tarefa
+   ============================================================ */
+
+.task-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: background var(--transition-fast);
+  animation: fadeInUp 0.3s ease;
+}
+
+.task-card:hover {
+  background: var(--color-bg-surface-hover);
+}
+
+.task-card--concluida {
+  opacity: 0.6;
+}
+
+/* ---- Status indicator ---- */
+.task-card__status {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all var(--transition-fast);
+  padding: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card__status:hover {
+  transform: scale(1.2);
+}
+
+.task-card__status--pendente {
+  border-color: var(--color-status-pending);
+}
+
+.task-card__status--em-andamento {
+  border-color: var(--color-status-progress);
+  background: var(--color-status-progress);
+}
+
+.task-card__status--concluida {
+  border-color: var(--color-status-done);
+  background: var(--color-status-done);
+}
+
+/* ---- Content ---- */
+.task-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.task-card__title--concluida {
+  text-decoration: line-through;
+}
+
+/* ---- Meta row ---- */
+.task-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.task-card__date {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-card__date--overdue {
+  color: var(--color-error);
+}
+
+.task-card__tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.task-card__tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+/* ---- Actions ---- */
+.task-card__actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.task-card:hover .task-card__actions {
+  opacity: 1;
+}
+
+/* ---- Responsivo ---- */
+@media (max-width: 768px) {
+  .task-card__actions {
+    opacity: 1;
+  }
+}

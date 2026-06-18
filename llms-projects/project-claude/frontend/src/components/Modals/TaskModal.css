@@ -1,0 +1,69 @@
+/* ============================================================
+   TaskModal — Estilos do modal de criação/edição de tarefas
+   ============================================================ */
+
+/* ---- Seção de Tags (checkboxes) ---- */
+.task-modal__tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  max-height: 160px;
+  overflow-y: auto;
+  padding: var(--space-xs);
+}
+
+.task-modal__tag-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.task-modal__tag-option:hover {
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+.task-modal__tag-option--checked {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.task-modal__tag-option--checked:hover {
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
+}
+
+.task-modal__tag-checkbox {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-modal__tags-empty {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  padding: var(--space-sm) 0;
+  font-style: italic;
+}
+
+/* ---- Date input ---- */
+.form-input[type='date'] {
+  color-scheme: dark;
+}
+
+.form-input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}

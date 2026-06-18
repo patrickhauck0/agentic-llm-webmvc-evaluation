@@ -1,0 +1,58 @@
+/* Design Tokens extracted from Figma */
+:root {
+  /* Colors */
+  --color-primary: #4e5773; /* color/blue/38 */
+  --color-secondary: #e09500; /* color/orange/44 */
+  --color-accent: #0d1117; /* color/azure/7 */
+  --color-background: #ffffff; /* color/white/solid */
+  --color-surface: #1e2535; /* color/azure/16 */
+  --color-surface-60: #1e253599; /* color/azure/60 5% */
+  --color-border: #6b7280; /* color/grey/46 */
+  --color-success: #22c55e; /* color/spring green/45 */
+  --color-error: #ef4444; /* color/red/60 */
+  --color-warning: #f0a500; /* color/orange/47 */
+  --color-muted: #878c95; /* color/grey/56 */
+
+  /* Font families */
+  --font-family-primary: "Outfit", sans-serif; /* font family/Font 1 */
+  --font-family-secondary: "DM Serif Display", serif; /* font family/Font 2 */
+
+  /* Font sizes */
+  --font-size-xs: 11.5px; /* font size/11_5 */
+  --font-size-sm: 12.5px; /* font size/12_5 */
+  --font-size-base: 14px; /* font size/14 */
+  --font-size-lg: 17.6px; /* font size from DM Serif Display Regular */
+
+  /* Font weights */
+  --font-weight-light: 300; /* font weight/300 */
+  --font-weight-regular: 400; /* font weight/400 */
+  --font-weight-medium: 500; /* font weight/500 */
+  --font-weight-semibold: 600; /* font weight/600 */
+  --font-weight-bold: 700; /* font weight/700 */
+
+  /* Line heights */
+  --line-height-sm: 16px; /* line height/16 */
+  --line-height-base: 22.32px; /* line height/22_32 */
+  --line-height-lg: 29.76px; /* line height/35_52 */
+
+  /* Letter spacing */
+  --letter-spacing-xs: 0.216px; /* letter spacing/0_22 */
+  --letter-spacing-sm: 0.357px; /* approximated from letter spacing/0_35 */
+  --letter-spacing-base: 0.456px; /* letter spacing/0_46 */
+  --letter-spacing-lg: 0.918px; /* letter spacing/0_92 */
+
+  /* Spacing (gap) */
+  --spacing-xxs: 4px; /* item spacing/xxs */
+  --spacing-xs: 5px; /* item spacing/5 */
+  --spacing-sm: 6px; /* item spacing/6 */
+  --spacing-md: 8px; /* item spacing/8 (approx) */
+  --spacing-lg: 12px; /* item spacing/12 */
+  --spacing-xl: 14px; /* item spacing/14 */
+  --spacing-xxl: 18px; /* item spacing/18 */
+  --spacing-3xl: 24px; /* item spacing/s+ */
+
+  /* Border radius */
+  --radius-sm: 3px; /* radius/3 */
+  --radius-md: 6px; /* approximate */
+  --radius-lg: 24px; /* radius/24 */
+}

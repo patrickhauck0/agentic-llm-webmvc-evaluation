@@ -1,0 +1,19 @@
+@import './ProjectModal.css';
+
+.confirm-modal {
+  max-width: 400px;
+}
+
+.confirm-modal .modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.confirm-modal .modal-header h3 {
+  color: var(--color-danger);
+}
+
+.confirm-modal .modal-body p {
+  color: var(--color-text);
+  margin: 0;
+}

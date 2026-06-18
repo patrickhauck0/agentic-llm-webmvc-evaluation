@@ -1,0 +1,43 @@
+@import './Login.css';
+
+.auth-back-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  margin-bottom: var(--space-md);
+  transition: color var(--transition-fast);
+  width: fit-content;
+}
+
+.auth-back-link:hover {
+  color: var(--color-text-primary);
+}
+
+.password-strength {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.password-strength__bar {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: var(--color-border);
+  transition: background var(--transition-normal);
+}
+
+.password-strength__bar--active.weak {
+  background: var(--color-error);
+}
+
+.password-strength__bar--active.medium {
+  background: var(--color-accent);
+}
+
+.password-strength__bar--active.strong {
+  background: var(--color-success);
+}

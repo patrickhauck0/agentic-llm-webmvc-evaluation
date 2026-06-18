@@ -1,0 +1,129 @@
+/* ============================================================
+   Header — Estilos da barra superior
+   ============================================================ */
+
+.header {
+  height: var(--header-height);
+  background: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* ---- Lado esquerdo ---- */
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  width: var(--sidebar-width);
+  padding-left: 20px;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+.header__brand-accent {
+  color: var(--color-accent);
+}
+
+/* ---- Lado direito ---- */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__greeting {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.header__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.header__logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-family: var(--font-family);
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.header__logout:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-surface-hover);
+}
+
+/* ---- Hamburger (mobile only) ---- */
+.header__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.header__hamburger:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-surface-hover);
+}
+
+/* ============================================================
+   Responsivo — Mobile (≤768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__brand {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .header__greeting {
+    display: none;
+  }
+}
