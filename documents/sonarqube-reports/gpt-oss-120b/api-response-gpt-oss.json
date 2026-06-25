@@ -1,0 +1,49 @@
+{
+  "component": {
+    "key": "SGT-GPT-OSS",
+    "name": "SGT-GPT-OSS",
+    "description": "Backend API REST para o Sistema de Gerenciamento de Tarefas (SGT)",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "complexity",
+        "value": "120"
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "code_smells",
+        "value": "16",
+        "bestValue": false
+      },
+      {
+        "metric": "security_rating",
+        "value": "3.0",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_index",
+        "value": "121",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      }
+    ]
+  }
+}

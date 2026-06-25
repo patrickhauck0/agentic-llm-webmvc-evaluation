@@ -1,0 +1,49 @@
+{
+  "component": {
+    "key": "SGT-Claude-Opus",
+    "name": "SGT-Claude-Opus",
+    "description": "SGT - Sistema de Gerenciamento de Tarefas (Backend API REST)",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "6",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "614"
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "2.0",
+        "bestValue": false
+      },
+      {
+        "metric": "code_smells",
+        "value": "131",
+        "bestValue": false
+      },
+      {
+        "metric": "security_rating",
+        "value": "3.0",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "3",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_index",
+        "value": "752",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      }
+    ]
+  }
+}
